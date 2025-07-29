@@ -307,8 +307,8 @@ footer {
 
 /* Unique Color Themes */
 .google {
-  background: linear-gradient(145deg, #c4c0c785, #1c1b1a);
-  color: #222;
+  background: linear-gradient(145deg, #39343d85, #4b453e);
+  color: #eee6e6;
 }
 .google i {
   color: #fbbc05;
