@@ -1,0 +1,374 @@
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #020c1b;
+  color: #c9d1d9;
+  line-height: 1.6;
+  padding-bottom: 50px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 60px 20px 30px;
+  background-color: #070708af;
+  border-bottom: 1px solid #30363d;
+}
+
+.profile-photo {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #111512;
+  margin-bottom: 15px;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  color: #f2f7f1;
+}
+
+header p.typing {
+  font-size: 1rem;
+  color: #32fa89;
+  min-height: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+header blockquote {
+  font-style: italic;
+  color: #a5d6ff;
+  margin-top: 15px;
+}
+
+/* Navigation */
+nav {
+  background: #161b22;
+  padding: 10px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #21262d;
+}
+
+nav a {
+  color: #0ee85e;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #0df324;
+}
+
+/* Sections */
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #f0f6fc;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #30363d;
+  padding-bottom: 5px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li::before {
+  content: "▹ ";
+  color: #0aec4a;
+  margin-right: 5px;
+}
+
+/* Projects */
+.project {
+  background: #161b22;
+  padding: 20px;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.project h3 {
+  margin-bottom: 10px;
+  color: #0ae411;
+}
+
+.project p {
+  margin: 5px 0;
+  color: #c9d1d9;
+}
+
+.project a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #07cf1f;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+.project-image {
+  width: 100%;
+  border-radius: 8px;
+  margin: 15px 0;
+  border: 1px solid #30363d;
+}
+
+/* Buttons & Links */
+a.btn {
+  background: #06dc31;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+a.btn:hover {
+  background: #2ea043;
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+form input,
+form textarea {
+  padding: 12px;
+  background: #0d1117;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #07ea4b;
+  box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.3);
+}
+
+form button {
+  padding: 12px;
+  background: #03ea48;
+  color: #0d1117;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #04ef17;
+}
+
+/* Social Links */
+.socials {
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.socials a {
+  color: #8b949e;
+  margin-right: 10px;
+  transition: color 0.3s;
+}
+
+.socials a:hover {
+  color: #07e71a;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #161b22;
+  border-top: 1px solid #21262d;
+  color: #8b949e;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+/* General card styles */
+.skill-card {
+  text-align: center;
+  text-decoration: none;
+  padding: 30px 20px;
+  border-radius: 12px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  color: #fff;
+  background-color: #1a1f24;
+  position: relative;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+}
+
+.skill-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.1);
+}
+
+/* Icon styles */
+.skill-card i {
+  font-size: 2.5rem;
+  padding: 18px;
+  margin-bottom: 12px;
+  display: inline-block;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Text */
+.skill-card p {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Icon shape modifiers */
+.icon-circle i {
+  border-radius: 50%;
+}
+
+.icon-square i {
+  border-radius: 5px;
+}
+
+.icon-triangle i {
+  clip-path: polygon(50% 0%, 100% 100%, 0 100%);
+  background: inherit;
+}
+
+.icon-hex i {
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0 50%);
+  background: inherit;
+}
+
+.icon-pentagon i {
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0 38%);
+  background: inherit;
+}
+
+/* Unique Color Themes */
+.google {
+  background: linear-gradient(145deg, #c4c0c785, #1c1b1a);
+  color: #222;
+}
+.google i {
+  color: #fbbc05;
+}
+
+.cms {
+  background: linear-gradient(145deg, #7d8b80, #29163f);
+}
+.cms i {
+  color: #ae7bf7;
+}
+
+.analytics {
+  background: linear-gradient(145deg, #0706065f, #142d46);
+}
+.analytics i {
+  color: #1d9bf0;
+}
+
+.ms-office {
+  background: linear-gradient(145deg, #0b120bd2, #403e3ea8);
+}
+.ms-office i {
+  color: #ff784e;
+}
+
+.valuation {
+  background: linear-gradient(145deg, #0d130eb8, #7a7d7b);
+}
+.valuation i {
+  color: #28a745;
+}
+
+/* Search box */
+#skillSearch {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 25px;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #c9d1d9;
+  font-size: 1rem;
+}
+
+/* Hidden class for toggling */
+.hidden {
+  display: none;
+}
+
+.sub-skills {
+  margin-top: 15px;
+  padding-left: 20px;
+  font-size: 0.95rem;
+  color: #c9d1d9;
+  line-height: 1.5;
+  transition: all 0.3s ease;
+}
+
+.sub-skills li::before {
+  content: "– ";
+  color: #0aec4a;
+}

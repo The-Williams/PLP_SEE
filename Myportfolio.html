@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Awino Edger Williams | Expert Portfolio</title>
+  <link rel="stylesheet" href="Myportfolio.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+</head>
+<body>
+  <header>
+    <img src="Graduate.jpg" alt="Profile photo of Awino Edger Williams" class="profile-photo" />
+    <h1>Awino Edger Williams</h1>
+    <p class="typing"></p>
+    <blockquote>"A person is a person through other persons." – Ubuntu Wisdom</blockquote>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#offer">What I Offer</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#interests">Interests</a>
+    <a href="#projects">Projects</a>
+    <a href="#recognition">Recognition</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I'm a resourceful, results-oriented professional based in Nairobi, Kenya with a strong background in business innovation, software, and tech-driven project leadership. I love solving real-world problems through entrepreneurship and technology.
+      </p>
+    </section>
+
+    <section id="offer">
+      <h2>What I Bring to the Table</h2>
+      <ul>
+        <li>Entrepreneurial thinking with proven startup leadership (Doleout)</li>
+        <li>Cross-functional skills: code, business, marketing, strategy</li>
+        <li>Deep commitment to scalable, impactful tech in Africa</li>
+      </ul>
+    </section>
+
+    <section id="skills">
+  <h2>Programming & Tech Skills</h2>
+  <p>Click on a skill to see sub-skills.</p>
+  <div class="skills-grid">
+
+  <div class="skill-card icon-circle google" onclick="showOnly('google')">
+    <i class="fa-brands fa-google"></i>
+    <p>Google Workspace</p>
+    <ul class="sub-skills hidden" id="google">
+      <li>Google Docs, Sheets, Slides</li>
+      <li>Gmail Automation</li>
+      <li>Google Forms & Data Collection</li>
+      <li>Drive Organization & Collaboration</li>
+    </ul>
+  </div>
+
+  <div class="skill-card icon-square cms" onclick="showOnly('cms')">
+    <i class="fa-solid fa-database"></i>
+    <p>CMS & CRM Tools</p>
+    <ul class="sub-skills hidden" id="cms">
+      <li>WordPress & Joomla</li>
+      <li>HubSpot CRM</li>
+      <li>Content Scheduling & Publishing</li>
+      <li>Lead Tracking & Automation</li>
+    </ul>
+  </div>
+
+  <div class="skill-card icon-triangle analytics" onclick="showOnly('analytics')">
+    <i class="fa-solid fa-code"></i>
+    <p>Software Engineering & Analytics</p>
+    <ul class="sub-skills hidden" id="analytics">
+      <li><strong>Languages:</strong></li>
+      <li>Python – data analysis, scripting</li>
+      <li>HTML – semantic structure</li>
+      <li>CSS – responsive styling</li>
+      <li>SQL – database querying</li>
+      <li><strong>Sub-skills:</strong></li>
+      <li>Git & GitHub version control</li>
+      <li>API integration</li>
+      <li>Data cleaning & visualization</li>
+      <li>Responsive web design</li>
+    </ul>
+  </div>
+
+  <div class="skill-card icon-hex ms-office" onclick="showOnly('msOffice')">
+    <i class="fa-brands fa-microsoft"></i>
+    <p>Microsoft Office</p>
+    <ul class="sub-skills hidden" id="msOffice">
+      <li>Excel for data entry and analysis</li>
+      <li>PowerPoint for presentations</li>
+      <li>MS Word formatting & reports</li>
+      <li>Outlook email & calendar</li>
+    </ul>
+  </div>
+
+  <div class="skill-card icon-pentagon valuation" onclick="showOnly('valuation')">
+    <i class="fa-solid fa-file-invoice-dollar"></i>
+    <p>Valuation Tools</p>
+    <ul class="sub-skills hidden" id="valuation">
+      <li>Asset tagging software</li>
+      <li>ICT hardware assessments</li>
+      <li>Database inventory audits</li>
+      <li>Valuation reporting</li>
+    </ul>
+  </div>
+
+</div>
+    <section id="education">
+      <h2>Education</h2>
+      <p><strong>Bachelor of Business Innovation Technology Management</strong><br>Jomo Kenyatta University, 2016–2020</p>
+      <p><strong>KCSE Certificate</strong><br>Orero High School, 2011–2015</p>
+      <p><strong>Certificate in Computer Applications</strong><br>African Institute of Research & Development Studies</p>
+      <a href="Awino_Edger_Williams_Modern_CV.docx" download class="btn">Download My CV</a>
+    </section>
+
+    <section id="interests">
+      <h2>Interests</h2>
+      <ul>
+        <li>Scaling tech platforms for community impact</li>
+        <li>Exploring marketing trends & digital growth</li>
+        <li>Innovating in sustainable tech solutions</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Piezo Bump – Renewable Energy</h3>
+        <p><strong>Tools:</strong> Sensors, Arduino</p>
+        <p><strong>Problem:</strong> Energy waste in road traffic</p>
+        <p><strong>Solution:</strong> Converted vehicle pressure into renewable energy</p>
+        <p><strong>Result:</strong> Prototype showcased at 2015 Engineering Fair, regional finalist</p>
+      </div>
+      <div class="project">
+        <h3>Doleout – Food Delivery E-commerce</h3>
+        <p><strong>Tools:</strong> Laravel, Google Ads, WhatsApp API</p>
+        <p><strong>Problem:</strong> Lack of accessible food delivery in Juja</p>
+        <p><strong>Solution:</strong> Co-founded and led platform with full-stack marketing, engagement & UX strategies</p>
+        <p><strong>Result:</strong> Gained 500+ users within 3 months and high local traction</p>
+        <a href="https://www.doleout.co.ke" target="_blank" rel="noopener">Visit Doleout</a>
+      </div>
+    </section>
+
+    <section id="recognition">
+      <h2>Recognition & Awards</h2>
+      <ul>
+        <li>Regional Winner – Kenya Science & Engineering Fair (2015)</li>
+        <li>Featured Speaker – Nairobi Innovation Summit (2022)</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/xzzgqjvd" method="POST">
+        <input type="text" name="name" placeholder="Your Name" aria-label="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" aria-label="Your Email" required />
+        <textarea name="message" placeholder="Your Message" aria-label="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/edger-williams-96ed" target="_blank">LinkedIn</a> |
+        <a href="https://wa.me/254740945831" target="_blank">WhatsApp</a> |
+        <a href="https://www.facebook.com/edgerio.williamshoser" target="_blank">Facebook</a> |
+        <a href="https://www.instagram.com/edger_a_williams/" target="_blank">Instagram</a> |
+        <a href="https://x.com/edger_williams" target="_blank">Twitter</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Awino Edger Williams. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const app = document.querySelector(".typing");
+    const typewriter = new Typewriter(app, {
+      loop: true,
+      delay: 75,
+    });
+    typewriter
+      .typeString("Software Engineer | Business Innovator | Tech for Impact")
+      .pauseFor(1500)
+      .deleteAll()
+      .typeString("Building Solutions That Scale in Africa")
+      .pauseFor(1500)
+      .deleteAll()
+      .start();
+  </script>
+</body>
+</html>
