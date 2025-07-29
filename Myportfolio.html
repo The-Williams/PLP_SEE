@@ -46,73 +46,73 @@
       </ul>
     </section>
 
-    <section id="skills">
+  <section id="skills">
   <h2>Programming & Tech Skills</h2>
-  <p>Click on a skill to see sub-skills.</p>
+
   <div class="skills-grid">
+    <!-- Google Workspace -->
+    <article class="skill-card" data-target="google">
+      <i class="fa-brands fa-google" aria-hidden="true"></i>
+      <h3>Google Workspace</h3>
+      <ul class="sub-skills" id="google" aria-hidden="true">
+        <li>Google Docs, Sheets, Slides</li>
+        <li>Gmail Automation</li>
+        <li>Google Forms & Data Collection</li>
+        <li>Drive Organization & Collaboration</li>
+      </ul>
+    </article>
 
-  <div class="skill-card icon-circle google" onclick="showOnly('google')">
-    <i class="fa-brands fa-google"></i>
-    <p>Google Workspace</p>
-    <ul class="sub-skills hidden" id="google">
-      <li>Google Docs, Sheets, Slides</li>
-      <li>Gmail Automation</li>
-      <li>Google Forms & Data Collection</li>
-      <li>Drive Organization & Collaboration</li>
-    </ul>
+    <!-- CMS & CRM -->
+    <article class="skill-card" data-target="cms">
+      <i class="fa-solid fa-database" aria-hidden="true"></i>
+      <h3>CMS & CRM Tools</h3>
+      <ul class="sub-skills" id="cms" aria-hidden="true">
+        <li>WordPress & Joomla</li>
+        <li>HubSpot CRM</li>
+        <li>Content Scheduling & Publishing</li>
+        <li>Lead Tracking & Automation</li>
+      </ul>
+    </article>
+
+    <!-- Software Engineering & Analytics -->
+    <article class="skill-card" data-target="analytics">
+      <i class="fa-solid fa-code" aria-hidden="true"></i>
+      <h3>Software Engineering & Analytics</h3>
+      <ul class="sub-skills" id="analytics" aria-hidden="true">
+        <li><strong>Languages:</strong> Python, HTML, CSS, SQL</li>
+        <li>Git & GitHub version control</li>
+        <li>API integration</li>
+        <li>Data cleaning & visualization</li>
+        <li>Responsive web design</li>
+      </ul>
+    </article>
+
+    <!-- Microsoft Office -->
+    <article class="skill-card" data-target="msOffice">
+      <i class="fa-brands fa-microsoft" aria-hidden="true"></i>
+      <h3>Microsoft Office</h3>
+      <ul class="sub-skills" id="msOffice" aria-hidden="true">
+        <li>Excel for data entry and analysis</li>
+        <li>PowerPoint for presentations</li>
+        <li>MS Word formatting & reports</li>
+        <li>Outlook email & calendar</li>
+      </ul>
+    </article>
+
+    <!-- Valuation Tools -->
+    <article class="skill-card" data-target="valuation">
+      <i class="fa-solid fa-file-invoice-dollar" aria-hidden="true"></i>
+      <h3>Valuation Tools</h3>
+      <ul class="sub-skills" id="valuation" aria-hidden="true">
+        <li>Asset tagging software</li>
+        <li>ICT hardware assessments</li>
+        <li>Database inventory audits</li>
+        <li>Valuation reporting</li>
+      </ul>
+    </article>
   </div>
+</section>
 
-  <div class="skill-card icon-square cms" onclick="showOnly('cms')">
-    <i class="fa-solid fa-database"></i>
-    <p>CMS & CRM Tools</p>
-    <ul class="sub-skills hidden" id="cms">
-      <li>WordPress & Joomla</li>
-      <li>HubSpot CRM</li>
-      <li>Content Scheduling & Publishing</li>
-      <li>Lead Tracking & Automation</li>
-    </ul>
-  </div>
-
-  <div class="skill-card icon-triangle analytics" onclick="showOnly('analytics')">
-    <i class="fa-solid fa-code"></i>
-    <p>Software Engineering & Analytics</p>
-    <ul class="sub-skills hidden" id="analytics">
-      <li><strong>Languages:</strong></li>
-      <li>Python – data analysis, scripting</li>
-      <li>HTML – semantic structure</li>
-      <li>CSS – responsive styling</li>
-      <li>SQL – database querying</li>
-      <li><strong>Sub-skills:</strong></li>
-      <li>Git & GitHub version control</li>
-      <li>API integration</li>
-      <li>Data cleaning & visualization</li>
-      <li>Responsive web design</li>
-    </ul>
-  </div>
-
-  <div class="skill-card icon-hex ms-office" onclick="showOnly('msOffice')">
-    <i class="fa-brands fa-microsoft"></i>
-    <p>Microsoft Office</p>
-    <ul class="sub-skills hidden" id="msOffice">
-      <li>Excel for data entry and analysis</li>
-      <li>PowerPoint for presentations</li>
-      <li>MS Word formatting & reports</li>
-      <li>Outlook email & calendar</li>
-    </ul>
-  </div>
-
-  <div class="skill-card icon-pentagon valuation" onclick="showOnly('valuation')">
-    <i class="fa-solid fa-file-invoice-dollar"></i>
-    <p>Valuation Tools</p>
-    <ul class="sub-skills hidden" id="valuation">
-      <li>Asset tagging software</li>
-      <li>ICT hardware assessments</li>
-      <li>Database inventory audits</li>
-      <li>Valuation reporting</li>
-    </ul>
-  </div>
-
-</div>
     <section id="education">
       <h2>Education</h2>
       <p><strong>Bachelor of Business Innovation Technology Management</strong><br>Jomo Kenyatta University, 2016–2020</p>
@@ -195,5 +195,55 @@
       .deleteAll()
       .start();
   </script>
+  <script>
+  // Expand/collapse one card at a time with smooth height animation
+  document.addEventListener('DOMContentLoaded', function () {
+    const cards = document.querySelectorAll('.skill-card');
+
+    function closeAll() {
+      document.querySelectorAll('.sub-skills').forEach((ul) => {
+        ul.style.maxHeight = null;
+        ul.setAttribute('aria-hidden', 'true');
+      });
+      cards.forEach((c) => c.classList.remove('active'));
+    }
+
+    function toggleCard(card) {
+      const id = card.dataset.target;
+      const target = document.getElementById(id);
+      const isOpen = target.getAttribute('aria-hidden') === 'false';
+
+      if (isOpen) {
+        // close current
+        target.style.maxHeight = null;
+        target.setAttribute('aria-hidden', 'true');
+        card.classList.remove('active');
+      } else {
+        // close others, then open this one
+        closeAll();
+        target.style.maxHeight = target.scrollHeight + 'px';
+        target.setAttribute('aria-hidden', 'false');
+        card.classList.add('active');
+      }
+    }
+
+    // Click + keyboard support
+    cards.forEach((card) => {
+      // Make the whole card focusable
+      card.setAttribute('tabindex', '0');
+
+      card.addEventListener('click', () => toggleCard(card));
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleCard(card);
+        }
+      });
+    });
+
+    // Optional: open the first one by default
+    // if (cards[0]) { toggleCard(cards[0]); }
+  });
+</script>
 </body>
 </html>
